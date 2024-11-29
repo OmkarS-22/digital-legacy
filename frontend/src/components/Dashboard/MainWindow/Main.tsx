@@ -1,7 +1,19 @@
-import React from "react";
+import { Box } from "@mui/material";
+import { ReactNode } from "react";
 
-function Main() {
-  return <div>Main</div>;
+export default function Main({
+  children,
+}: {
+  children: ReactNode;
+}): JSX.Element {
+  return (
+    <Box
+      padding={{ base: 5, md: 6 }}
+      paddingInlineStart={{ lg: 12 }}
+      paddingInlineEnd={{ lg: 12 }}
+      minHeight={{ base: "calc(100vh - 120px)", lg: "calc(100vh - 240px)" }}
+    >
+      {children}
+    </Box>
+  );
 }
-
-export default Main;
