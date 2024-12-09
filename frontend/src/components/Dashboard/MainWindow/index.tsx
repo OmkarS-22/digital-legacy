@@ -2,7 +2,7 @@ import About from "../Pages/About";
 import Home from "../Pages/Home";
 import Footer from "./Footer";
 import Main from "./Main";
-import NavBar from "./NavBar/NavBar";
+import NavBar from "./NavBar";
 
 export type setActivePage = React.Dispatch<React.SetStateAction<string>>;
 
@@ -41,7 +41,7 @@ function MainWindow({
 
   return (
     <>
-      <NavBar setActivePage={setActivePage} pages={page} />
+      <NavBar activePage={activePage} setActivePage={setActivePage} pages={page} />
       <Main>{currentPage()}</Main>
       <Footer />
     </>

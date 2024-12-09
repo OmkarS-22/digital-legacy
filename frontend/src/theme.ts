@@ -15,11 +15,14 @@ const theme = createTheme({
       paper: "#FFFFFF", // Cards or modals
     },
     text: {
-      primary: "#1A1A1A", // Main text
-      secondary: "#606060", // Subdued text
+      primary: "#E8E8E8", // Main text
+      secondary: "#B0B0B0", // Subdued text
     },
   },
   typography: {
+    allVariants: {
+      color: "#E8E8E8"
+    },
     fontFamily: '"Roboto", "Open Sans", "Arial", sans-serif',
     h1: {
       fontSize: "2.5rem", // Headlines
