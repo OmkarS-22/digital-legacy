@@ -8,10 +8,10 @@ export default function Main({
 }): JSX.Element {
   return (
     <Box
-      padding={{ base: 5, md: 6 }}
+      padding={{ sm: 5, md: 6 }}
       paddingInlineStart={{ lg: 12 }}
       paddingInlineEnd={{ lg: 12 }}
-      minHeight={{ base: "calc(100vh - 120px)", lg: "calc(100vh - 240px)" }}
+      minHeight={{ sm: "calc(100vh - 120px)", lg: "calc(100vh - 240px)" }}
     >
       {children}
     </Box>

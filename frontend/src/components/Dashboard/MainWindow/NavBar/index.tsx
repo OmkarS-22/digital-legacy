@@ -19,7 +19,7 @@ export default function NavBar({
       justifyContent="space-between"
       paddingInlineStart={6}
       paddingInlineEnd={6}
-      height={{ base: "60px", lg: "80px" }}
+      height={{ sm: "60px", lg: "80px" }}
       position="sticky"
       zIndex={2}
       top="0px"
