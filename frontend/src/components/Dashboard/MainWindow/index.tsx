@@ -1,3 +1,4 @@
+import { FaCircleInfo, FaHouse } from "react-icons/fa6";
 import About from "../Pages/About";
 import Home from "../Pages/Home";
 import Footer from "./Footer";
@@ -8,8 +9,9 @@ export type setActivePage = React.Dispatch<React.SetStateAction<string>>;
 
 export type Page = {
   name: string;
-  element: JSX.Element;
+  element?: JSX.Element;
   appBar: boolean;
+  icon: JSX.Element;
 };
 
 function MainWindow({
@@ -22,13 +24,15 @@ function MainWindow({
   const page: Page[] = [
     {
       name: "Home",
-      element: <Home />,
+      element: <Home setActivePage={setActivePage} />,
       appBar: true,
+      icon: <FaHouse />,
     },
     {
       name: "About",
       element: <About />,
       appBar: true,
+      icon: <FaCircleInfo />,
     },
   ];
 
@@ -41,7 +45,11 @@ function MainWindow({
 
   return (
     <>
-      <NavBar activePage={activePage} setActivePage={setActivePage} pages={page} />
+      <NavBar
+        activePage={activePage}
+        setActivePage={setActivePage}
+        pages={page}
+      />
       <Main>{currentPage()}</Main>
       <Footer />
     </>

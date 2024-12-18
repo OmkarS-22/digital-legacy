@@ -11,7 +11,7 @@ export default function Main({
       padding={{ sm: 5, md: 6 }}
       paddingInlineStart={{ lg: 12 }}
       paddingInlineEnd={{ lg: 12 }}
-      minHeight={{ sm: "calc(100vh - 120px)", lg: "calc(100vh - 240px)" }}
+      minHeight={{ sm: "calc(100vh - 220px)", lg: "calc(100vh - 240px)" }}
     >
       {children}
     </Box>

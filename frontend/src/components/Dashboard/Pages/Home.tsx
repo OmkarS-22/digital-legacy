@@ -1,6 +1,12 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Button, Typography } from "@mui/material";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { setActivePage } from "../MainWindow";
 
-export default function Home(): JSX.Element {
+export default function Home({
+  setActivePage,
+}: {
+  setActivePage: setActivePage;
+}): JSX.Element {
   return (
     <Box
       sx={{
@@ -12,14 +18,12 @@ export default function Home(): JSX.Element {
         backgroundRepeat: "no-repeat",
       }}
       width={{ xs: "auto", md: "90vw" }}
-      height={{ xs: "100vh", md: "76vh" }}
+      height={{ xs: "100vh", sm: "80vh", lg: "76vh" }}
       display={"flex"}
       justifyContent={"end"}
       alignItems={"center"}
     >
-      <Box
-        textAlign={"right"}
-      >
+      <Box textAlign={"right"}>
         <Typography
           textAlign={"end"}
           fontSize={{ xs: "40px", md: "80px" }}
@@ -29,7 +33,7 @@ export default function Home(): JSX.Element {
         >
           Don't let anything be left
           <Typography
-            marginTop={-4}
+            marginTop={{ md: -4 }}
             fontSize={{ xs: "40px", md: "80px" }}
             letterSpacing={"5px"}
             fontWeight={800}
@@ -41,17 +45,23 @@ export default function Home(): JSX.Element {
         <Typography
           fontSize={{ xs: "16px", md: "24px" }}
           color={"#676666"}
-          mt={-4}
+          mt={{ md: -4 }}
         >
           Leave behind what matters most, and let it reach those who
-          <Typography
-            fontSize={{ xs: "16px", md: "24px" }}
-            color={"#676666"}
-          >
+          <Typography fontSize={{ xs: "16px", md: "24px" }} color={"#676666"}>
             need to hear it.
           </Typography>
         </Typography>
+        <Box display={"flex"} justifyContent={"end"} gap={2} mt={4}>
+          <Button variant="contained">Save Your Light</Button>
+          <Button
+            endIcon={<FaArrowUpRightFromSquare />}
+            onClick={() => setActivePage("About")}
+          >
+            Know More
+          </Button>
+        </Box>
       </Box>
     </Box>
-  )
+  );
 }
