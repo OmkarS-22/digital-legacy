@@ -1,6 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { setActivePage } from "../MainWindow";
+import TopBlob from "./elements/TopBlob";
+import BottomBlob from "./elements/BottomBlob";
 
 export default function Home({
   setActivePage,
@@ -10,12 +12,14 @@ export default function Home({
   return (
     <Box
       sx={{
-        backgroundImage: `
-          radial-gradient(circle, rgba(0,0,0,0) 40%, #000 90%), 
-          url(/img/bg.png)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        // backgroundImage: `
+        //   radial-gradient(circle, rgba(0,0,0,0) 40%, #000 90%),
+        //   url(/img/bg.png)`,
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
+        // backgroundRepeat: "no-repeat",
+        position: "relative",
+        overflow: "hidden",
       }}
       width={{ xs: "auto", md: "90vw" }}
       height={{ xs: "100vh", sm: "80vh", lg: "76vh" }}
@@ -23,6 +27,8 @@ export default function Home({
       justifyContent={"end"}
       alignItems={"center"}
     >
+      <TopBlob />
+      <BottomBlob />
       <Box textAlign={"right"}>
         <Typography
           textAlign={"end"}
